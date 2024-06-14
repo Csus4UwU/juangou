@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>均绩计算</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="dataTable">
+        <tr>
+            <th>数值</th>
+            <th>权重</th>
+        </tr>
+    </table>
+    <script src="gpa.js"></script>
+    <button onclick="addRow()">添加行</button>
+    <button onclick="deleteRow()">删除行</button>
+    <button onclick="WAverage()">计算</button>
+    <p>加权平均数： <span id="weightedAverage"></span></p>
+</body>
+
+</html>

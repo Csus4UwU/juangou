@@ -14,7 +14,7 @@ function deleteRow() {
     }
 }
 
-function calculateWeightedAverage() {
+function WAverage() {
     let table = document.getElementById("dataTable");
     let sumValue = 0;
     let sumWeight = 0;
@@ -27,4 +27,4 @@ function calculateWeightedAverage() {
     return sumValue / sumWeight;
 }
 
-document.getElementById("weightedAverage").innerText = calculateWeightedAverage();
+document.getElementById("weightedAverage").innerText = WAverage();
