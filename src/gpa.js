@@ -3,8 +3,8 @@ function addRow() {
     let newRow = table.insertRow(-1);
     let cell1 = newRow.insertCell(0);
     let cell2 = newRow.insertCell(1);
-    cell1.innerHTML = '<input type="number" class="value">';
-    cell2.innerHTML = '<input type="number" class="weight">';
+    cell1.innerHTML = '<input type="number" class="credit">';
+    cell2.innerHTML = '<input type="number" class="point">';
 }
 
 function deleteRow() {
@@ -14,17 +14,10 @@ function deleteRow() {
     }
 }
 
-function WAverage() {
+function GpaCalculate() {
     let table = document.getElementById("dataTable");
-    let sumValue = 0;
-    let sumWeight = 0;
-    for (let i = 1; i < table.rows.length; i++) {
-        let value = parseFloat(table.rows[i].cells[0].getElementsByTagName("input")[0].value);
-        let weight = parseFloat(table.rows[i].cells[1].getElementsByTagName("input")[0].value);
-        sumValue += value * weight;
-        sumWeight += weight;
-    }
-    return sumValue / sumWeight;
+
+    return table.rows.document;
 }
 
-document.getElementById("weightedAverage").innerText = WAverage();
+document.getElementById("weightedAverage").innerText = GpaCalculate();
