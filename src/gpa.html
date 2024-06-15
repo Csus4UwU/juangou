@@ -22,6 +22,29 @@
             background-color: #e2e2e2;
         }
     </style>
+    <script>
+        function addRow() {
+            let table = document.getElementById("dataTable");
+            let newRow = table.insertRow(-1);
+            let cell1 = newRow.insertCell(0);
+            let cell2 = newRow.insertCell(1);
+            cell1.innerHTML = '<input type="number">';
+            cell2.innerHTML = '<input type="number">';
+        }
+
+        function deleteRow() {
+            let table = document.getElementById("dataTable");
+            if (table.rows.length > 1) {
+                table.deleteRow(-1);
+            }
+        }
+
+        function GpaCalculate() {
+            let table = document.getElementById("dataTable");
+            let res = table.newRow.cell1;
+            document.getElementById("gpaResult").innerText = res;
+        }
+    </script>
 </head>
 
 <body>
@@ -32,13 +55,10 @@
         </tr>
     </table>
     <br>
-    <input type="button" onclick="getInnerHTML()" value="w">
-
     <button onclick="addRow()">添加行</button>
     <button onclick="deleteRow()">删除行</button>
     <button onclick="GpaCalculate()">计算</button>
-    <p>GPA: <span id="weightedAverage"></span></p>
-    <script src="gpa.js"></script>
+    <p>GPA: <span id="gpaResult"></span></p>
 </body>
 
 </html>
